@@ -1,0 +1,20 @@
+<!-- If there's a success value and it's not an empty array, display success.  <div> is dismissible by clicking X.  -->
+<% if (success && success.length) {%>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <%= success %>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+    </div>
+    <% } %>
+
+
+        <!-- If there's an error value and it's not an empty array, display error.  <div> is dismissible by clicking X.  -->
+        <% if (error && error.length) {%>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <%= error %>
+                    <button type="button" class="btn-close text-end" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+            </div>
+            <% } %>
